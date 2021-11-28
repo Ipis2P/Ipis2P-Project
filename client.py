@@ -1,7 +1,3 @@
-#IPK
-#Projekt 1 - varianta 2
-#Adrian Boros [xboros03@stud.fit.vutbr.cz]
-#Datum: 17.03.2019
 
 import socket
 import json
@@ -44,7 +40,7 @@ if (int)(message[1]) != 200:
         print("ERROR {}: City {}".format(message[1],message[2]), file=sys.stderr)
         sys.exit(0)
     elif (int)(message[1]) == 401:
-        print("ERROR {}: {} - Invalid API key".format(message[1],message[2]), file=sys.stderr)
+        print("ERROR {}: {} - Chybný API kľúč".format(message[1],message[2]), file=sys.stderr)
         sys.exit(0)
     else:
         print("ERROR {}: {}".format(message[1],message[2]), file=sys.stderr)
